@@ -128,12 +128,5 @@ class DoubleList:
         from persistence_json import import_json
         import_json(self, ruta)
 
-    # ---------- Alias en inglés ----------
-    insertion_sort = insertar_ordenado
-    delete = eliminar
-    search = buscar
-    scroll_forward = recorrer_adelante
-    scroll_backward = recorrer_atras
-
     def __len__(self):
         return self._size

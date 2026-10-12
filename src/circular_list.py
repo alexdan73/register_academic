@@ -99,15 +99,6 @@ class CircularList:
         from persistence_json import import_json
         import_json(self, ruta)
 
-    # ---------- Alias en inglés ----------
-    insert = insertar
-    delete = eliminar
-    insertion = insertar
-    eliminate = eliminar
-    recursive_search = buscar_recursivo
-    rotate = rotar
-    next_to = siguiente
-    scroll = recorrer
-
+   
     def __len__(self):
         return self._size

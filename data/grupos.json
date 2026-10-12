@@ -1,0 +1,19 @@
+{
+  "grupos": [
+    {
+      "nombre_grupo": "C",
+      "tutor": "Carla",
+      "tema": "Diseño"
+    },
+    {
+      "nombre_grupo": "A",
+      "tutor": "Mario",
+      "tema": "Calculo"
+    },
+    {
+      "nombre_grupo": "B",
+      "tutor": "Luis",
+      "tema": "Ingles"
+    }
+  ]
+}

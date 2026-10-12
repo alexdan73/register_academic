@@ -1,0 +1,57 @@
+{
+  "semestres": [
+    {
+      "anio": 2023,
+      "term": 1,
+      "materias": [
+        {
+          "cod": "P1",
+          "nombre": "Carl",
+          "nota": 34.0
+        },
+        {
+          "cod": "P1",
+          "nombre": "Marcus",
+          "nota": 42.0
+        }
+      ]
+    },
+    {
+      "anio": 2024,
+      "term": 1,
+      "materias": [
+        {
+          "cod": "O1",
+          "nombre": "Isma",
+          "nota": 28.0
+        },
+        {
+          "cod": "O1",
+          "nombre": "Michael",
+          "nota": 37.0
+        }
+      ]
+    },
+    {
+      "anio": 2024,
+      "term": 2,
+      "materias": [
+        {
+          "cod": "M1",
+          "nombre": "Pedro",
+          "nota": 40.0
+        },
+        {
+          "cod": "M1",
+          "nombre": "Juan",
+          "nota": 35.0
+        },
+        {
+          "cod": "M1",
+          "nombre": "Daisi",
+          "nota": 47.0
+        }
+      ]
+    }
+  ]
+}

@@ -38,126 +38,126 @@ Python 3.8 o superior
 No se requieren librerías externas. Solo se utiliza la biblioteca estándar (os, sys, csv, json).
 
 1. Ejecución
-   Abre una terminal y sitúate en la carpeta src (donde está app.py):
+Abre una terminal y sitúate en la carpeta src (donde está app.py):
 
-    cd ruta/al/proyecto/src
+cd ruta/al/proyecto/src
 
 2. Ejecuta el programa:
 
-    bash
-    python app.py
+bash
+python app.py
 3. Aparecera el menú principal
 
-    ========== MENÚ PRINCIPAL ==========
-    1. Inscritos (Lista Simple)
-    2. Historial  (Lista Doble)
-    3. Grupos     (Lista Circular)
-    4. Reportes
-    5. Salir
-
-    Funcionalidades por Módulo
+========== MENÚ PRINCIPAL ==========
 1. Inscritos (Lista Simple)
-    Agregar estudiante (ID, nombres, correo).
+2. Historial  (Lista Doble)
+3. Grupos     (Lista Circular)
+4. Reportes
+5. Salir
 
-    Eliminar por ID.
+Funcionalidades por Módulo
+1. Inscritos (Lista Simple)
+Agregar estudiante (ID, nombres, correo).
 
-    Buscar por ID.
+Eliminar por ID.
 
-    Mostrar todos los inscritos.
+Buscar por ID.
 
-    Exportar a data/inscritos.csv.
+Mostrar todos los inscritos.
 
-    Importar desde data/inscritos.csv.
+Exportar a data/inscritos.csv.
+
+Importar desde data/inscritos.csv.
 
 2. Historial (Lista Doble)
-    Agregar semestre (ordenado automáticamente por año y término).
+Agregar semestre (ordenado automáticamente por año y término).
 
-    Buscar semestre (formato AAAA-T, ej. 2024-1).
+Buscar semestre (formato AAAA-T, ej. 2024-1).
 
-    Recorrer hacia adelante y hacia atrás.
+Recorrer hacia adelante y hacia atrás.
 
-    Eliminar semestre.
+Eliminar semestre.
 
-    Exportar a data/historial.json.
+Exportar a data/historial.json.
 
-    Importar desde data/historial.json.
+Importar desde data/historial.json.
 
 3. Grupos (Lista Circular)
-    Agregar grupo (nombre, tutor, tema).
+Agregar grupo (nombre, tutor, tema).
 
-    Eliminar grupo.
+Eliminar grupo.
 
-    Búsqueda recursiva por nombre de grupo.
+Búsqueda recursiva por nombre de grupo.
 
-    Rotar k posiciones (cambia el turno actual).
+Rotar k posiciones (cambia el turno actual).
 
-    Recorrer el ciclo (por defecto 2 vueltas).
+Recorrer el ciclo (por defecto 2 vueltas).
 
-    Exportar a data/grupos.json.
+Exportar a data/grupos.json.
 
-    Importar desde data/grupos.json.
+Importar desde data/grupos.json.
 
 4. Reportes
-    Top 3 mejores promedios del historial académico.
+Top 3 mejores promedios del historial académico.
 
-    Siguiente grupo en turno (rota 1 posición y muestra el nuevo turno).
+Siguiente grupo en turno (rota 1 posición y muestra el nuevo turno).
 
-    Cantidad total de inscritos.
+Cantidad total de inscritos.
 
-    Persistencia
-    Lista	    Formato	    Archivo
-    Inscritos	CSV	        data/inscritos.csv
-    Historial	JSON	    data/historial.json
-    Grupos	    JSON	    data/grupos.json
+Persistencia
+Lista	    Formato	    Archivo
+Inscritos	CSV	        data/inscritos.csv
+Historial	JSON	    data/historial.json
+Grupos	    JSON	    data/grupos.json
 
-    CSV se usa para datos tabulares homogéneos (inscritos).
+CSV se usa para datos tabulares homogéneos (inscritos).
 
-    JSON se usa para estructuras jerárquicas o con texto libre (historial y grupos).
+JSON se usa para estructuras jerárquicas o con texto libre (historial y grupos).
 
-    Casos de Prueba Mínimos
-    Puedes verificar el correcto funcionamiento siguiendo estos pasos:
+Casos de Prueba Mínimos
+Puedes verificar el correcto funcionamiento siguiendo estos pasos:
 
-    Lista Simple
-    Agregar 3 inscritos con IDs 1, 2 y 3.
+Lista Simple
+Agregar 3 inscritos con IDs 1, 2 y 3.
 
-    Buscar el ID 2.
+Buscar el ID 2.
 
-    Eliminar el ID 3.
+Eliminar el ID 3.
 
-    Mostrar la lista (deben quedar IDs 1 y 2).
+Mostrar la lista (deben quedar IDs 1 y 2).
 
-    Exportar CSV.
+Exportar CSV.
 
-    Importar CSV (opcional: limpiar antes con la opción de importar, que reemplaza los datos).
+Importar CSV (opcional: limpiar antes con la opción de importar, que reemplaza los datos).
 
-    Volver a mostrar.
+Volver a mostrar.
 
-    Lista Doble
-    Insertar semestres desordenados: 2024-2, 2023-1, 2024-1.
+Lista Doble
+Insertar semestres desordenados: 2024-2, 2023-1, 2024-1.
 
-    Recorrer hacia adelante: debe mostrar 2023-1, 2024-1, 2024-2.
+Recorrer hacia adelante: debe mostrar 2023-1, 2024-1, 2024-2.
 
-    Recorrer hacia atrás: orden inverso.
+Recorrer hacia atrás: orden inverso.
 
-    Exportar JSON e importar para comprobar persistencia.
+Exportar JSON e importar para comprobar persistencia.
 
-    Lista Circular
-    Agregar 3 grupos: A, B, C.
+Lista Circular
+Agregar 3 grupos: A, B, C.
 
-    Buscar recursivamente el grupo C.
+Buscar recursivamente el grupo C.
 
-    Rotar 2 posiciones y mostrar el nuevo turno.
+Rotar 2 posiciones y mostrar el nuevo turno.
 
-    Recorrer 2 vueltas para ver el ciclo completo.
+Recorrer 2 vueltas para ver el ciclo completo.
 
-    Eliminar el grupo B y comprobar que el ciclo sigue funcionando con A y C.
+Eliminar el grupo B y comprobar que el ciclo sigue funcionando con A y C.
 
-    Notas de Implementación
-    Recursividad obligatoria: La búsqueda en la lista circular (buscar_recursivo) es recursiva.
+Notas de Implementación
+Recursividad obligatoria: La búsqueda en la lista circular (buscar_recursivo) es recursiva.
 
-    Nodos desde cero: Se definieron clases SimpleNode, DoubleNode y CircularNode. No se usan listas nativas para almacenar nodos.
+Nodos desde cero: Se definieron clases SimpleNode, DoubleNode y CircularNode. No se usan listas nativas para almacenar nodos.
 
-    Complejidad: Las operaciones de inserción, búsqueda y eliminación son O(n) en promedio. La rotación es O(k). El recorrido es O(n).
+Complejidad: Las operaciones de inserción, búsqueda y eliminación son O(n) en promedio. La rotación es O(k). El recorrido es O(n).
 
-    Manejo de errores: Las importaciones validan existencia y formato de archivos; los menús capturan entradas inválidas.
+Manejo de errores: Las importaciones validan existencia y formato de archivos; los menús capturan entradas inválidas.
 
