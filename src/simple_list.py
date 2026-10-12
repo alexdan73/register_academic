@@ -81,12 +81,6 @@ class SimpleList:
         self.head = None
         self._size = 0
 
-    # ---------- Alias en inglés (compatibilidad) ----------
-    insertion_final = insertar_final
-    insertion_start = insertar_inicio
-    delete = eliminar
-    search = buscar
-    scroll = recorrer
 
     def __len__(self):
         return self._size

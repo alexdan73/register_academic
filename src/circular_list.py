@@ -99,6 +99,5 @@ class CircularList:
         from persistence_json import import_json
         import_json(self, ruta)
 
-   
     def __len__(self):
         return self._size
